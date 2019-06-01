@@ -21,8 +21,36 @@ Licence URI: http://www.os-templates.com/template-terms
 
 
 <?php include 'header.php'; ?>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="sel1">Selecciona una categoría: </label>
+          <select class="form-control" id="sel1">
+            <option>Todos</option>
+            <option>Tecnología</option>
+            <option>Papelerría</option>
+            <option>Cocina</option>
+            <option>Juguetes</option>
+            <option>Plásticos</option>
+            <option>Limpieza</option>
+          </select>
+      </div>
+    </div>
 
+    <div class="col-sm-6">
+      <label for="sel1">O busca el producto por su nombre: </label> 
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search" name="search">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+          </div>
+      </div>
+    </div>
+    <br>
 
+  </div>
+</div>
 
 
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>

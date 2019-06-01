@@ -36,13 +36,13 @@ Licence URI: http://www.os-templates.com/template-terms
   </form>
   
     <br>
-  <?php
+   <?php
     if(isset($_GET['err']))
     {
       echo '<div class="alert alert-danger" role="alert">
             Error al identificarse</div>';
     }
-?>
+  ?>
 
 
 </div>
