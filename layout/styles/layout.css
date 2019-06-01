@@ -29,11 +29,11 @@ File: Layout CSS
 #header #logo *{margin:0; padding:0; line-height:1;}
 #header #logo h1{margin-top:8px; font-size:26px; letter-spacing:3px;}
 
-#header #quickinfo{font-size:.8rem; text-transform:uppercase;}
+#header #quickinfo{font-size:.8rem; /*text-transform:uppercase;*/}
 #header #quickinfo li{margin-right:50px;}
 #header #quickinfo li:last-child{margin-right:0;}
 #header #quickinfo strong{display:block; margin:0 0 -5px 0; padding:0; font-size:.9rem;}
-#header #quickinfo br{display:none;}
+/*#header #quickinfo br{display:none;}*/
 
 
 /* Page Intro

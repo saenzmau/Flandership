@@ -6,7 +6,7 @@ Author URI: http://www.os-templates.com/
 Licence: Free to use under our free template licence terms
 Licence URI: http://www.os-templates.com/template-terms
 -->
-<html lang="">
+<html lang="es">
 <head>
   <title>Flandership</title>
   <meta charset="utf-8">
@@ -20,7 +20,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <body id="top">
 
 
-<?php include 'header.php';?>
+<?php include 'header.php'; ?>
 
 
 
