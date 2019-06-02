@@ -1,0 +1,91 @@
+a{color:#F4A330;text-decoration:none;}
+a:active, a:focus{background:transparent;text-decoration:none;}/* IE10 + 11 Bugfix - prevents grey background */
+hr, .borderedbox{border-color:#F4F4F4;}
+label span{color:#FF0000; background-color:inherit;}
+input:focus, textarea:focus, *:required:focus{border-color:#F4A330;}
+
+.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
+.overlay.light{color:#474747;}
+.overlay.light::after{background-color:rgba(255,255,255,.8);}
+.overlay.coloured::after{background-color:#C46219;}
+
+.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#F4A330; border-color:#F4A330;}
+.btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+
+
+/* Flexslider */
+.flex-direction-nav a, .flex-direction-nav .flex-disabled:hover{color:#FFFFFF;}
+.flex-direction-nav a:hover{color:#F4A330;}
+
+
+/* Rows */
+.row1{color:#FFFFFF; background-color:#000000; border-color:#FFFFFF;}
+.row2, .row2 a{}
+.row3{color:#474747; background-color:#FFFFFF;}
+.row4{color:#ff502f;}
+
+
+
+/* Header */
+#header #logo a{color:inherit;}
+
+
+/* Page Intro */
+#pageintro li{color:#FFFFFF;}
+
+
+/* Content Area */
+.sectiontitle .heading::after{background-color:#C46219;}
+
+.services article i{color:rgba(255,255,255,.2);}
+
+.team > figure > a{color:inherit;}
+.team > figure > a:hover::before{background:rgba(0,0,0,.2); border-color:#F4A330;}
+.team > figure > a:hover::after{color:#FFFFFF;}
+
+
+/* Footer */
+#footer .heading{color:#FFFFFF;}
+
+#footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(255,255,255,.2);}
+
+#footer nav a{color:inherit;}
+#footer nav li:first-child a, #footer nav a:hover{color:#F4A330;}
+
+#footer .faico a{color:inherit; background-color:#141414;}
+#footer .faico a:hover{color:#FFFFFF;}
+#footer .faicon-dribble:hover{background-color:#EA4C89;}
+#footer .faicon-facebook:hover{background-color:#3B5998;}
+#footer .faicon-google-plus:hover{background-color:#DB4A39;}
+#footer .faicon-linkedin:hover{background-color:#0E76A8;}
+#footer .faicon-twitter:hover{background-color:#00ACEE;}
+#footer .faicon-vk:hover{background-color:#4E658E;}
+
+
+/* Navigation */
+#mainav li a{color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#F4A330; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#F4A330;}
+#mainav form select{color:#FFFFFF; background-color:#000000; border-color:rgba(255,255,255,.2);}
+
+#breadcrumb a{color:inherit; background-color:inherit;}
+#breadcrumb li:last-child a{color:#F4A330;}
+
+.container .sidebar nav a{color:inherit; border-color:#F4F4F4;}
+.container .sidebar nav a:hover{color:#F4A330;}
+
+.pagination a, .pagination strong{border-color:#F4F4F4;}
+.pagination .current *{color:#FFFFFF; background-color:white;}
+
+#backtotop{color:#FFFFFF; background-color:#FFFFFF;}
+
+
+/* Tables + Comments */
+table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#F4F4F4;}
+#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#F4A330;}
+th{color:#FFFFFF; background-color:#373737;}
+tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{color:inherit; background-color:#FBFBFB;}
+tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
+table a, #comments a{background-color:inherit;}

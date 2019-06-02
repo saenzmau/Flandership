@@ -17,12 +17,12 @@ Licence URI: http://www.os-templates.com/template-terms
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-<body id="top">
+<body style="background-color: #FBFBFF;">
 
 
 <?php include 'header.php'; ?>
 
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<?php include_once ('footer.php'); ?>
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
