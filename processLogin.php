@@ -27,6 +27,7 @@ if(isset($_POST['Login']))
 
             $row=mysqli_fetch_row($res_u);
 
+            $_SESSION['idUsuario'] = $row[0];
             $_SESSION['Nombre'] = $row[1];
             $_SESSION['Apellido'] = $row[2];
             $_SESSION['Email'] = $row[3];

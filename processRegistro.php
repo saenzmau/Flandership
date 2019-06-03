@@ -34,9 +34,15 @@ if(isset($_POST['Registro']))
 
         session_start();
 
-        $_SESSION['Nombre'] = $Nombre;
-        $_SESSION['Apellido'] = $Apellido;
-        $_SESSION['Email'] = $Email;
+        $query_usuario = "SELECT * FROM usuarios WHERE Email='$Email' AND Password='$Password'";
+        $results_usuario = mysqli_query($conn, $query_usuario);
+
+        $row=mysqli_fetch_row($results_usuario);
+
+        $_SESSION['idUsuario'] = $row[0];
+        $_SESSION['Nombre'] = $row[1];
+        $_SESSION['Apellido'] = $row[2];
+        $_SESSION['Email'] = $row[3];
 
         mysqli_close($conn); 
 

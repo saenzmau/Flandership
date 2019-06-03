@@ -9,7 +9,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <html lang="es">
 <head>
   <title>Flandership</title>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
   <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
@@ -17,9 +17,7 @@ Licence URI: http://www.os-templates.com/template-terms
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-<body id="top">
-
-
+<body id="top" style="background-color: #FBFBFF;">
 <?php include 'header.php'; ?>
 <div class="container">
   <div class="row">
@@ -49,11 +47,40 @@ Licence URI: http://www.os-templates.com/template-terms
     </div>
     <br>
 
+    
+
+  </div>
+
+  <div class="row">
+  <?php 
+    
+      $conn = mysqli_connect("localhost", "root", "", "flandership");
+
+      $sql_p = "SELECT * FROM productos ";
+
+      $res_productos = mysqli_query($conn, $sql_p);
+      
+
+      while($row = mysqli_fetch_row($res_productos))
+      {
+       
+        echo'<div class="col-sm-3 col-xs-6">';
+        echo'<a href="detalleProducto.php?productId='.$row[0].'">'; 
+        echo'<img src="images/'.$row[3].'" style="width:150px;height:150px;" ></a>';
+        echo'<br>';
+        echo'<h3>$ '.number_format((float)$row[4], 2, '.', '').'</h3>';
+        echo'<h4>'.utf8_encode($row[1]).'</h4>';
+        echo'</div>';
+      }
+
+      mysqli_close($conn);
+    
+    
+    ?>
   </div>
 </div>
 
-
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<?php include_once ('footer.php'); ?>
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
