@@ -41,7 +41,7 @@ if(isset($_SESSION['Nombre']))
   $Email = $_SESSION['Email'];
 
   $conn = mysqli_connect("localhost", "root", "", "flandership");
-  $sql = "SELECT idOrden FROM ordenes WHERE idUsuario='$idUsuario' AND Registrado=0 LIMIT 1";
+  $sql = "SELECT idOrden FROM ordenes WHERE idUsuario='$idUsuario' AND Registrado = 0 LIMIT 1";
   $results = mysqli_query($conn, $sql);
 
   if(mysqli_num_rows($results) == 1)
@@ -64,11 +64,14 @@ if(isset($_SESSION['Nombre']))
       
       $totalPendiente=0;
       $row=mysqli_fetch_row($results);
-      
-      $sql2 = "SELECT A.idOrden, A.idProducto, B.Nombre, B.PrecioMenudeo, C.Nombre, A.Cantidad, (A.Cantidad * B.PrecioMenudeo) as Subtotal
-      FROM ordenitems A, productos B, categorias C, usuarios D, ordenes E 
-      WHERE A.idProducto = B.idProducto AND B.idCategoria = C.idCategoria AND D.idUsuario = E.idUsuario
-      AND E.Registrado = 0 AND E.idUsuario = '$idUsuario' AND E.idOrden='$row[0]'";
+      $OrdenPendiente = $row[0];
+
+
+        $sql2 = "SELECT A.idOrden, A.idProducto, B.Nombre, B.PrecioMenudeo, C.Nombre, A.Cantidad, (A.Cantidad * B.PrecioMenudeo) as Subtotal, E.Registrado
+        FROM ordenitems A, productos B, categorias C, usuarios D, ordenes E 
+        WHERE A.idProducto = B.idProducto AND B.idCategoria = C.idCategoria AND 
+        D.idUsuario = E.idUsuario AND A.idOrden = E.idOrden
+        AND E.Registrado = 0 AND E.idUsuario = '$idUsuario' AND E.idOrden='$OrdenPendiente'";
       
       $results2 = mysqli_query($conn, $sql2);
 
