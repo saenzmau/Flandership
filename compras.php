@@ -29,7 +29,13 @@ Licence URI: http://www.os-templates.com/template-terms
 <?php
 if(isset($_GET['success']))
 {
-  echo'<div class="alert alert-success" role="alert">Compra exitosa!</div>';
+    $res = $_GET['success'];
+    if($res=='1'){
+        echo'<div class="alert alert-success" role="alert">Compra exitosa!</div>';
+    }
+    else{
+        echo'<div class="alert alert-success" role="alert">Compra no finalizada</div>';
+    }
 }
 
 
@@ -94,7 +100,7 @@ if(isset($_SESSION['Nombre']))
       echo '</div>';
       echo '<div class="row">
                 <div><h3>Total a Pagar: $ '  .number_format((float)$totalPendiente, 2, '.', '').'<h3>
-                    <form action="processCompra.php" method="POST">
+                    <form action="pay.php" method="POST">
                       <input hidden name="idCompra" value="'.$row[0].'">
                       <input hidden   name="total" value="'.$totalPendiente.'">
                       <button type="submit" name ="Comprar" class="btn btn-success" style="text-transform: capitalize">Comprar todo</button>
@@ -116,8 +122,6 @@ else
 {
   header('location: login.php');
 }
-
-
 
 ?>  
 
